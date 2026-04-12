@@ -76,7 +76,7 @@ function PressPage() {
       </section>
 
       {/* Press coverage */}
-      <section style={{ padding: '0 1.5rem 5rem' }}>
+      <section style={{ padding: '0 1.5rem 6rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <h2 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
             Press Coverage
@@ -96,36 +96,6 @@ function PressPage() {
           </div>
         </div>
       </section>
-
-      {/* Letters of Support */}
-      <section style={{ padding: '0 1.5rem 7rem' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <h2 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-            Letters of Support
-          </h2>
-          <div style={{ backgroundColor: 'var(--navy-light)', borderRadius: '0.75rem', padding: '2rem', border: '1px solid rgba(201,168,76,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap' }}>
-            <div>
-              <div style={{ fontWeight: 800, color: 'white', fontSize: '1.05rem', marginBottom: '0.5rem' }}>Community Support Letters</div>
-              <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.925rem', lineHeight: 1.7, margin: 0, maxWidth: '480px' }}>
-                Letters of support from elected officials, clergy, educators, and community members submitted to the parole board on Todd's behalf.
-              </p>
-            </div>
-            <a href="https://drive.google.com/file/d/13-RKVREMJfAH0px3Aj9Wf_zaVIHzwV1k/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: '0.9rem', padding: '0.75rem 1.5rem', whiteSpace: 'nowrap' }}>
-              Read Letters
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer CTA */}
-      <div style={{ borderTop: '1px solid rgba(201,168,76,0.15)', padding: '3rem 1.5rem', textAlign: 'center' }}>
-        <p style={{ color: 'rgba(255,255,255,0.5)', marginBottom: '1.25rem', fontSize: '0.95rem' }}>
-          Moved by Todd's story?
-        </p>
-        <a href="/#petition" className="btn-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
-          Sign the Petition
-        </a>
-      </div>
 
     </>
   )
