@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 
@@ -433,9 +433,9 @@ function FreeToddScott() {
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
                 Read coverage from major outlets, watch the HBO documentary, and see letters of support from the community.
               </p>
-              <a href="/press" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem', display: 'block' }}>
+              <Link to="/press" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem', display: 'block' }}>
                 View Press &amp; Media
-              </a>
+              </Link>
             </div>
           </div>
         </div>
