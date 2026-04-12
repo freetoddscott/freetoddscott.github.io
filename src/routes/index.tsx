@@ -61,7 +61,7 @@ function FreeToddScott() {
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
                 }}>
-                  35+ Years Incarcerated · Demanding Justice
+                  35+ Years Incarcerated · Seeking Redemption
                 </span>
               </div>
               <h1 className="hero-title" style={{ color: 'var(--gold)', margin: '0 0 1.5rem', textShadow: '0 4px 32px rgba(0,0,0,0.65)' }}>
