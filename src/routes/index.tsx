@@ -8,13 +8,8 @@ export const Route = createFileRoute('/')({
 function FreeToddScott() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [petitionSubmitted, setPetitionSubmitted] = useState(false)
-  const [petitionData, setPetitionData] = useState({
-    name: '',
-    email: '',
-    city: '',
-    state: '',
-    message: '',
-  })
+  const [petitionLoading, setPetitionLoading] = useState(false)
+  const [petitionError, setPetitionError] = useState('')
 
   const navLinks = [
     { href: '#who', label: 'Who is Todd' },
@@ -28,7 +23,23 @@ function FreeToddScott() {
 
   function handlePetitionSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setPetitionSubmitted(true)
+    const form = e.target as HTMLFormElement
+    setPetitionLoading(true)
+    setPetitionError('')
+    fetch('https://formspree.io/f/YOUR_FORM_ID', { // Replace YOUR_FORM_ID after creating a free form at formspree.io
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    })
+      .then(res => {
+        if (res.ok) {
+          setPetitionSubmitted(true)
+        } else {
+          setPetitionError('Something went wrong. Please try again or email us directly.')
+        }
+      })
+      .catch(() => setPetitionError('Network error. Please check your connection and try again.'))
+      .finally(() => setPetitionLoading(false))
   }
 
   return (
@@ -159,7 +170,7 @@ function FreeToddScott() {
             </a>
           </div>
 
-          {/* Image placeholder */}
+          {/* Image — replace /todd-hero.jpg in public/ with a real photo */}
           <div style={{
             marginTop: '4rem',
             borderRadius: '1rem',
@@ -169,17 +180,23 @@ function FreeToddScott() {
             margin: '4rem auto 0',
             background: 'var(--navy-light)',
             height: '340px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
-            gap: '0.75rem',
           }}>
-            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="1.5">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-            </svg>
-            <span style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>Todd Scott — Photograph</span>
+            <img
+              src="/todd-hero.jpg"
+              alt="Todd Scott"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              onError={e => {
+                const el = e.currentTarget
+                el.style.display = 'none'
+                const parent = el.parentElement!
+                parent.style.display = 'flex'
+                parent.style.alignItems = 'center'
+                parent.style.justifyContent = 'center'
+                parent.style.flexDirection = 'column'
+                parent.style.gap = '0.75rem'
+                parent.innerHTML = `<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="color:rgba(255,255,255,0.4);font-size:0.9rem">Add todd-hero.jpg to public/</span>`
+              }}
+            />
           </div>
         </div>
       </section>
@@ -190,24 +207,31 @@ function FreeToddScott() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center' }}>
             <div>
               {/* Portrait placeholder */}
-              <div style={{
-                borderRadius: '1rem',
-                overflow: 'hidden',
-                border: '3px solid var(--gold)',
-                background: 'rgba(10,22,40,0.08)',
-                height: '420px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                gap: '0.75rem',
-              }}>
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--navy-mid)" strokeWidth="1.5">
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                </svg>
-                <span style={{ color: 'rgba(10,22,40,0.4)', fontSize: '0.9rem' }}>Todd Scott Portrait</span>
-              </div>
+              {/* Portrait — replace /todd-portrait.jpg in public/ with a real photo */}
+            <div style={{
+              borderRadius: '1rem',
+              overflow: 'hidden',
+              border: '3px solid var(--gold)',
+              background: 'rgba(10,22,40,0.08)',
+              height: '420px',
+            }}>
+              <img
+                src="/todd-portrait.jpg"
+                alt="Todd Scott portrait"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                onError={e => {
+                  const el = e.currentTarget
+                  el.style.display = 'none'
+                  const parent = el.parentElement!
+                  parent.style.display = 'flex'
+                  parent.style.alignItems = 'center'
+                  parent.style.justifyContent = 'center'
+                  parent.style.flexDirection = 'column'
+                  parent.style.gap = '0.75rem'
+                  parent.innerHTML = `<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--navy-mid)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="color:rgba(10,22,40,0.4);font-size:0.9rem">Add todd-portrait.jpg to public/</span>`
+                }}
+              />
+            </div>
             </div>
 
             <div>
@@ -505,7 +529,7 @@ function FreeToddScott() {
                 Your signature has been recorded. Please share this page with friends and family to amplify Todd's story.
               </p>
               <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: freetoddscott.com')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/freetoddscott/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on X (Twitter)
                 </a>
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.com')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
@@ -524,22 +548,20 @@ function FreeToddScott() {
                   <label htmlFor="pet-name">Full Name *</label>
                   <input
                     id="pet-name"
+                    name="name"
                     type="text"
                     placeholder="Your full name"
                     required
-                    value={petitionData.name}
-                    onChange={e => setPetitionData(p => ({ ...p, name: e.target.value }))}
                   />
                 </div>
                 <div>
                   <label htmlFor="pet-email">Email Address *</label>
                   <input
                     id="pet-email"
+                    name="email"
                     type="email"
                     placeholder="your@email.com"
                     required
-                    value={petitionData.email}
-                    onChange={e => setPetitionData(p => ({ ...p, email: e.target.value }))}
                   />
                 </div>
               </div>
@@ -548,20 +570,18 @@ function FreeToddScott() {
                   <label htmlFor="pet-city">City</label>
                   <input
                     id="pet-city"
+                    name="city"
                     type="text"
                     placeholder="Your city"
-                    value={petitionData.city}
-                    onChange={e => setPetitionData(p => ({ ...p, city: e.target.value }))}
                   />
                 </div>
                 <div>
                   <label htmlFor="pet-state">State</label>
                   <input
                     id="pet-state"
+                    name="state"
                     type="text"
                     placeholder="Your state"
-                    value={petitionData.state}
-                    onChange={e => setPetitionData(p => ({ ...p, state: e.target.value }))}
                   />
                 </div>
               </div>
@@ -569,15 +589,24 @@ function FreeToddScott() {
                 <label htmlFor="pet-message">Personal Message (Optional)</label>
                 <textarea
                   id="pet-message"
+                  name="message"
                   rows={3}
                   placeholder="Why do you support Todd's release? (Optional)"
-                  value={petitionData.message}
-                  onChange={e => setPetitionData(p => ({ ...p, message: e.target.value }))}
                   style={{ resize: 'vertical' }}
                 />
               </div>
-              <button type="submit" className="btn-gold" style={{ width: '100%', fontSize: '1.05rem', padding: '1rem' }}>
-                Sign the Petition — Free Todd Scott
+              {petitionError && (
+                <p style={{ color: '#f87171', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center' }}>
+                  {petitionError}
+                </p>
+              )}
+              <button
+                type="submit"
+                className="btn-gold"
+                disabled={petitionLoading}
+                style={{ width: '100%', fontSize: '1.05rem', padding: '1rem', opacity: petitionLoading ? 0.7 : 1 }}
+              >
+                {petitionLoading ? 'Submitting…' : 'Sign the Petition — Free Todd Scott'}
               </button>
               <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center', lineHeight: 1.5 }}>
                 Your information will only be used in support of Todd Scott's parole advocacy and will not be shared with third parties.
