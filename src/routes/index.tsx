@@ -428,22 +428,14 @@ function FreeToddScott() {
                     <path d="M4 6h16M4 12h16M4 18h7" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Read & Share the Story</h3>
+                <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Read &amp; Share the Story</h3>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-                Read coverage from major outlets and letters of support from community members.
+                Read coverage from major outlets, watch the HBO documentary, and see letters of support from the community.
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                <a href="https://drive.google.com/file/d/1qs2cosJ9AeiLDDd2D9uPMn0fAnBO1pd_/view" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  NYTimes Article
-                </a>
-                <a href="https://www.kcrw.com/news/shows/press-play-with-madeleine-brand/musk-trump-parole-sf-photog/nature-crime" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  KCRW Coverage
-                </a>
-                <a href="https://drive.google.com/file/d/13-RKVREMJfAH0px3Aj9Wf_zaVIHzwV1k/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', padding: '0.625rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'underline', display: 'block', transition: 'color 0.2s' }}>
-                  Read Letters of Support
-                </a>
-              </div>
+              <a href="/press" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem', display: 'block' }}>
+                View Press &amp; Media
+              </a>
             </div>
           </div>
         </div>
@@ -602,6 +594,11 @@ function FreeToddScott() {
               </a>
               <a href="mailto:bringtoddscotthome57@gmail.com" className="btn-outline-gold">
                 Send Your Letter
+              </a>
+            </div>
+            <div style={{ marginTop: '1.25rem', textAlign: 'center' }}>
+              <a href="https://drive.google.com/file/d/13-RKVREMJfAH0px3Aj9Wf_zaVIHzwV1k/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.875rem', textDecoration: 'underline' }}>
+                Read existing letters of support
               </a>
             </div>
           </div>
