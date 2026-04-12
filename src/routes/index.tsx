@@ -7,7 +7,6 @@ export const Route = createFileRoute('/')({
 })
 
 function FreeToddScott() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [petitionState, handlePetitionSubmit] = useForm('xpqkakra')
 
   useEffect(() => {
