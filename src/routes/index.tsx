@@ -41,7 +41,7 @@ function FreeToddScott() {
       <nav className="sticky-nav">
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
-            <a href="#hero" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.125rem', letterSpacing: '-0.01em' }}>
                 #FreeToddScott
               </span>
