@@ -185,44 +185,6 @@ function FreeToddScott() {
 
       {/* The Problem With Parole */}
       {/* HBO Documentary */}
-      <section id="action" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
-        <div style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
-          <div className="fade-in" style={{ marginBottom: '2rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
-              Now Streaming on HBO
-            </div>
-            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem', fontStyle: 'italic' }}>
-              Nature of the Crime
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '580px', margin: '0 auto' }}>
-              The moving HBO documentary that tells Todd's story in his own words — an intimate portrait of 35 years of transformation, mentorship, and a broken system that refuses to see who he is today.
-            </p>
-          </div>
-
-          {/* Trailer embed */}
-          <div style={{ borderRadius: '0.875rem', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.25)', maxWidth: '720px', margin: '2.5rem auto', aspectRatio: '16/9' }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/dKLcR_AFA4Y"
-              title="Nature of the Crime — Official Trailer"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ display: 'block', border: 'none' }}
-            />
-          </div>
-
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://www.hbomax.com/movies/nature-of-the-crime/a83494c0-f7f4-4f85-8ca9-975e9acdb47e" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
-              Watch Full Film on HBO
-            </a>
-            <a href="https://www.youtube.com/watch?v=dKLcR_AFA4Y" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
-              Watch Trailer on YouTube
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* The Problem With Parole */}
       <section id="problem" style={{ backgroundColor: 'var(--cream)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
@@ -267,17 +229,56 @@ function FreeToddScott() {
         </div>
       </section>
 
+      {/* HBO Documentary */}
+      <section id="action" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="fade-in" style={{ marginBottom: '2rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+              Now Streaming on HBO
+            </div>
+            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem', fontStyle: 'italic' }}>
+              Nature of the Crime
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '580px', margin: '0 auto' }}>
+              The moving HBO documentary that tells Todd's story in his own words — an intimate portrait of 35 years of transformation, mentorship, and a broken system that refuses to see who he is today.
+            </p>
+          </div>
+
+          {/* Trailer embed */}
+          <div style={{ borderRadius: '0.875rem', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.25)', maxWidth: '720px', margin: '2.5rem auto', aspectRatio: '16/9' }}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dKLcR_AFA4Y"
+              title="Nature of the Crime — Official Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ display: 'block', border: 'none' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://www.hbomax.com/movies/nature-of-the-crime/a83494c0-f7f4-4f85-8ca9-975e9acdb47e" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
+              Watch Full Film on HBO
+            </a>
+            <a href="https://www.youtube.com/watch?v=dKLcR_AFA4Y" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
+              Watch Trailer on YouTube
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Petition Section */}
-      <section id="petition" style={{ backgroundColor: '#07111f', padding: '6rem 1.5rem' }}>
+      <section id="petition" style={{ backgroundColor: 'var(--cream)', color: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               Add Your Name
             </div>
-            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem' }}>
+            <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
               Sign the Petition
             </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', lineHeight: 1.7 }}>
+            <p style={{ color: '#4a5a70', fontSize: '1.05rem', lineHeight: 1.7 }}>
               Add your name to the growing list of people demanding that Todd Scott be given a fair chance at parole — based on who he is today, not who he was at 19.
             </p>
           </div>
@@ -377,7 +378,7 @@ function FreeToddScott() {
               >
                 {petitionState.submitting ? 'Submitting…' : 'Sign the Petition — Free Todd Scott'}
               </button>
-              <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center', lineHeight: 1.5 }}>
+              <p style={{ color: 'rgba(10,22,40,0.4)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center', lineHeight: 1.5 }}>
                 Your information will only be used in support of Todd Scott's parole advocacy and will not be shared with third parties.
               </p>
             </form>
