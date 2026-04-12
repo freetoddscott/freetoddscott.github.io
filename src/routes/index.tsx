@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 
 export const Route = createFileRoute('/')({
   component: FreeToddScott,
@@ -7,9 +8,7 @@ export const Route = createFileRoute('/')({
 
 function FreeToddScott() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [petitionSubmitted, setPetitionSubmitted] = useState(false)
-  const [petitionLoading, setPetitionLoading] = useState(false)
-  const [petitionError, setPetitionError] = useState('')
+  const [petitionState, handlePetitionSubmit] = useForm('xpqkakra')
 
   const navLinks = [
     { href: '#who', label: 'Who is Todd' },
@@ -20,27 +19,6 @@ function FreeToddScott() {
     { href: '#petition', label: 'Petition' },
     { href: '#contact', label: 'Contact' },
   ]
-
-  function handlePetitionSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    const form = e.target as HTMLFormElement
-    setPetitionLoading(true)
-    setPetitionError('')
-    fetch('https://formspree.io/f/YOUR_FORM_ID', { // Replace YOUR_FORM_ID after creating a free form at formspree.io
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' },
-    })
-      .then(res => {
-        if (res.ok) {
-          setPetitionSubmitted(true)
-        } else {
-          setPetitionError('Something went wrong. Please try again or email us directly.')
-        }
-      })
-      .catch(() => setPetitionError('Network error. Please check your connection and try again.'))
-      .finally(() => setPetitionLoading(false))
-  }
 
   return (
     <div style={{ backgroundColor: 'var(--navy)', color: 'white', minHeight: '100vh' }}>
@@ -487,7 +465,7 @@ function FreeToddScott() {
                 <a href="https://www.kcrw.com/news/shows/press-play-with-madeleine-brand/musk-trump-parole-sf-photog/nature-crime" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
                   KCRW Coverage
                 </a>
-                <a href="https://drive.google.com/file/d/13-RKVREMJfAH0px3AiLDDd2D9uPMn0fAnBO1pd_/view" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', padding: '0.625rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'underline', display: 'block', transition: 'color 0.2s' }}>
+                <a href="https://drive.google.com/file/d/13-RKVREMJfAH0px3Aj9Wf_zaVIHzwV1k/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', padding: '0.625rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'underline', display: 'block', transition: 'color 0.2s' }}>
                   Read Letters of Support
                 </a>
               </div>
@@ -511,7 +489,7 @@ function FreeToddScott() {
             </p>
           </div>
 
-          {petitionSubmitted ? (
+          {petitionState.succeeded ? (
             <div style={{
               backgroundColor: 'var(--navy-light)',
               border: '2px solid var(--gold)',
@@ -532,7 +510,7 @@ function FreeToddScott() {
                 <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/freetoddscott/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on X (Twitter)
                 </a>
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.com')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.github.io/freetoddscott/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on Facebook
                 </a>
               </div>
@@ -553,6 +531,7 @@ function FreeToddScott() {
                     placeholder="Your full name"
                     required
                   />
+                  <ValidationError field="name" errors={petitionState.errors} style={{ color: '#f87171', fontSize: '0.8rem', marginTop: '0.25rem', display: 'block' }} />
                 </div>
                 <div>
                   <label htmlFor="pet-email">Email Address *</label>
@@ -563,6 +542,7 @@ function FreeToddScott() {
                     placeholder="your@email.com"
                     required
                   />
+                  <ValidationError field="email" errors={petitionState.errors} style={{ color: '#f87171', fontSize: '0.8rem', marginTop: '0.25rem', display: 'block' }} />
                 </div>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
@@ -595,18 +575,14 @@ function FreeToddScott() {
                   style={{ resize: 'vertical' }}
                 />
               </div>
-              {petitionError && (
-                <p style={{ color: '#f87171', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center' }}>
-                  {petitionError}
-                </p>
-              )}
+              <ValidationError errors={petitionState.errors} style={{ color: '#f87171', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center', display: 'block' }} />
               <button
                 type="submit"
                 className="btn-gold"
-                disabled={petitionLoading}
-                style={{ width: '100%', fontSize: '1.05rem', padding: '1rem', opacity: petitionLoading ? 0.7 : 1 }}
+                disabled={petitionState.submitting}
+                style={{ width: '100%', fontSize: '1.05rem', padding: '1rem', opacity: petitionState.submitting ? 0.7 : 1 }}
               >
-                {petitionLoading ? 'Submitting…' : 'Sign the Petition — Free Todd Scott'}
+                {petitionState.submitting ? 'Submitting…' : 'Sign the Petition — Free Todd Scott'}
               </button>
               <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center', lineHeight: 1.5 }}>
                 Your information will only be used in support of Todd Scott's parole advocacy and will not be shared with third parties.
