@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { useState, useEffect } from 'react'
+import { createFileRoute } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 
 export const Route = createFileRoute('/')({
@@ -25,81 +25,8 @@ function FreeToddScott() {
     return () => observer.disconnect()
   }, [])
 
-  const navLinks = [
-    { href: '#who', label: 'Who is Todd' },
-    { href: '#journey', label: 'His Journey' },
-    { href: '#problem', label: 'The Problem' },
-    { href: '#voices', label: 'Voices' },
-    { href: '#action', label: 'Take Action' },
-    { href: '#petition', label: 'Petition' },
-    { href: '#contact', label: 'Contact' },
-  ]
-
   return (
-    <div style={{ backgroundColor: 'var(--navy)', color: 'white', minHeight: '100vh' }}>
-      {/* Sticky Nav */}
-      <nav className="sticky-nav">
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
-            <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.125rem', letterSpacing: '-0.01em' }}>
-                #FreeToddScott
-              </span>
-            </a>
-
-            {/* Desktop Nav */}
-            <div className="desktop-nav" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-              {navLinks.map(link => (
-                <a key={link.href} href={link.href} className="nav-link">
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              className="mobile-menu-btn"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              style={{
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '5px',
-                padding: '0.5rem',
-              }}
-              aria-label="Toggle menu"
-            >
-              <span style={{ width: '24px', height: '2px', backgroundColor: 'var(--gold)', display: 'block' }} />
-              <span style={{ width: '24px', height: '2px', backgroundColor: 'var(--gold)', display: 'block' }} />
-              <span style={{ width: '24px', height: '2px', backgroundColor: 'var(--gold)', display: 'block' }} />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div style={{
-            backgroundColor: 'var(--navy)',
-            borderTop: '1px solid rgba(201,168,76,0.2)',
-            padding: '1rem 1.5rem 1.5rem',
-          }}>
-            {navLinks.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="nav-link"
-                style={{ display: 'block', padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.07)', fontSize: '1rem' }}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        )}
-      </nav>
-
+    <>
       {/* Hero Section */}
       <section id="hero" style={{ position: 'relative', backgroundColor: 'var(--navy)' }}>
         <div style={{ position: 'relative', height: '90vh', minHeight: '640px', overflow: 'hidden' }}>
@@ -385,7 +312,7 @@ function FreeToddScott() {
                 <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Watch the HBO Documentary</h3>
               </div>
               <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-                Watch <em>"Nature of the Crime"</em> — the HBO documentary that tells Todd's story in his own words.
+                Watch <em>"Nature of the Crime"</em> — the moving HBO documentary featuring Todd's story. An intimate portrait of 35 years of transformation and a system that refuses to see who he is today.
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
                 <a href="https://www.hbomax.com/movies/nature-of-the-crime/a83494c0-f7f4-4f85-8ca9-975e9acdb47e" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
@@ -395,47 +322,6 @@ function FreeToddScott() {
                   Watch Trailer on YouTube
                 </a>
               </div>
-            </div>
-
-            {/* Write a Letter */}
-            <div style={{ backgroundColor: 'var(--navy)', borderRadius: '0.75rem', padding: '1.75rem', border: '1px solid rgba(201,168,76,0.3)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '50%', backgroundColor: 'rgba(201,168,76,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2">
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Write a Letter of Support</h3>
-              </div>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-                Your voice matters. Send a letter of support directly to the parole board. Use our template to get started.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                <a href="mailto:bringtoddscotthome57@gmail.com" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  Email Your Support
-                </a>
-                <a href="https://docs.google.com/document/d/1yxAjOUE5FnvN-JBnmtVWLN7klAVxpmFHNFbJJOAZ850/edit" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  Download Letter Template
-                </a>
-              </div>
-            </div>
-
-            {/* Read & Share */}
-            <div style={{ backgroundColor: 'var(--navy)', borderRadius: '0.75rem', padding: '1.75rem', border: '1px solid rgba(201,168,76,0.3)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '50%', backgroundColor: 'rgba(201,168,76,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2">
-                    <path d="M4 6h16M4 12h16M4 18h7" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Read &amp; Share the Story</h3>
-              </div>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-                Read coverage from major outlets, watch the HBO documentary, and see letters of support from the community.
-              </p>
-              <Link to="/press" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem', display: 'block' }}>
-                View Press &amp; Media
-              </Link>
             </div>
           </div>
         </div>
@@ -638,6 +524,6 @@ function FreeToddScott() {
           </p>
         </div>
       </footer>
-    </div>
+    </>
   )
 }

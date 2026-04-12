@@ -1,7 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
 
-import '../styles.css'
-
 export const Route = createFileRoute('/press')({
   component: PressPage,
 })
@@ -25,27 +23,7 @@ function PressPage() {
   ]
 
   return (
-    <div style={{ backgroundColor: 'var(--navy)', color: 'white', minHeight: '100vh' }}>
-
-      {/* Nav */}
-      <nav className="sticky-nav">
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
-            <a href="/" style={{ textDecoration: 'none' }}>
-              <span style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.125rem', letterSpacing: '-0.01em' }}>
-                #FreeToddScott
-              </span>
-            </a>
-            <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-              <a href="/" className="nav-link" style={{ fontSize: '0.8rem' }}>← Back</a>
-              <a href="/#petition" className="btn-gold" style={{ fontSize: '0.875rem', padding: '0.5rem 1.25rem' }}>
-                Sign the Petition
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+    <>
       {/* Page header */}
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '8rem 1.5rem 4rem', textAlign: 'center' }}>
         <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
@@ -149,6 +127,6 @@ function PressPage() {
         </a>
       </div>
 
-    </div>
+    </>
   )
 }
