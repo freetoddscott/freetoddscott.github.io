@@ -117,6 +117,11 @@ html {
   padding: 1.75rem;
 }
 
+/* Horizontal scroll row scrollbar */
+.quotes-scroll::-webkit-scrollbar { height: 4px; }
+.quotes-scroll::-webkit-scrollbar-track { background: transparent; }
+.quotes-scroll::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.35); border-radius: 2px; }
+
 .achievement-item {
   display: flex;
   align-items: flex-start;
