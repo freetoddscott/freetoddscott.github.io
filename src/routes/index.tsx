@@ -314,7 +314,7 @@ function FreeToddScott() {
               Community Support
             </div>
             <h2 className="section-title" style={{ color: 'white' }}>
-              Words from Community Leaders<br />& Loved Ones
+              Words from Community Leaders & Loved Ones
             </h2>
           </div>
 
@@ -592,7 +592,7 @@ function FreeToddScott() {
               </div>
               <div>
                 <div style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>Step 3</div>
-                <div style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>Email your letter to <strong style={{ color: 'var(--gold)' }}>bringtoddscotthome57@gmail.com</strong></div>
+                <div style={{ color: 'rgba(255,255,255,0.85)', lineHeight: 1.6 }}>Email your letter to <strong style={{ color: 'var(--gold)', wordBreak: 'break-all' }}>bringtoddscotthome57@gmail.com</strong></div>
               </div>
             </div>
 
