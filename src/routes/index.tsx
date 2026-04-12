@@ -75,9 +75,6 @@ function FreeToddScott() {
                 <a href="#petition" className="btn-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
                   Sign the Petition
                 </a>
-                <a href="#action" className="btn-outline-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
-                  Join the Movement
-                </a>
               </div>
             </div>
           </div>
