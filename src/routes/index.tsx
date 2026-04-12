@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 
 export const Route = createFileRoute('/')({
@@ -9,6 +9,21 @@ export const Route = createFileRoute('/')({
 function FreeToddScott() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [petitionState, handlePetitionSubmit] = useForm('xpqkakra')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries =>
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        }),
+      { threshold: 0.12 },
+    )
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   const navLinks = [
     { href: '#who', label: 'Who is Todd' },
@@ -147,35 +162,17 @@ function FreeToddScott() {
               Join the Movement
             </a>
           </div>
+        </div>
 
-          {/* Image — replace /todd-hero.jpg in public/ with a real photo */}
-          <div style={{
-            marginTop: '4rem',
-            borderRadius: '1rem',
-            overflow: 'hidden',
-            border: '2px solid rgba(201,168,76,0.3)',
-            maxWidth: '600px',
-            margin: '4rem auto 0',
-            background: 'var(--navy-light)',
-            height: '340px',
-          }}>
-            <img
-              src={`${import.meta.env.BASE_URL}todd-hero.jpg`}
-              alt="Todd Scott"
-              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              onError={e => {
-                const el = e.currentTarget
-                el.style.display = 'none'
-                const parent = el.parentElement!
-                parent.style.display = 'flex'
-                parent.style.alignItems = 'center'
-                parent.style.justifyContent = 'center'
-                parent.style.flexDirection = 'column'
-                parent.style.gap = '0.75rem'
-                parent.innerHTML = `<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="color:rgba(255,255,255,0.4);font-size:0.9rem">Add todd-hero.jpg to public/</span>`
-              }}
-            />
-          </div>
+        {/* Full-bleed hero photo */}
+        <div style={{ width: '100%', height: '480px', overflow: 'hidden', position: 'relative', marginTop: '2rem' }}>
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(to bottom, var(--navy), transparent)', zIndex: 1, pointerEvents: 'none' }} />
+          <img
+            src={`${import.meta.env.BASE_URL}todd-hero.jpg`}
+            alt="A scene from the HBO documentary Nature of the Crime"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }}
+          />
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(to top, var(--navy), transparent)', zIndex: 1, pointerEvents: 'none' }} />
         </div>
       </section>
 
@@ -241,7 +238,7 @@ function FreeToddScott() {
       {/* Todd's Rehabilitative Journey */}
       <section id="journey" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               Decades of Dedication
             </div>
@@ -253,26 +250,22 @@ function FreeToddScott() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
+          <div className="timeline">
             {[
-              { text: 'Earned his GED in 1992 — just three years into his sentence', bold: 'GED, 1992' },
-              { text: 'Completed multiple rehabilitation and self-development programs', bold: 'Rehab Programs' },
-              { text: 'Certified in HIV/AIDS awareness and health education', bold: 'Certified Educator' },
-              { text: 'Mentor in the Youth Assistance Program (Y.A.P.) — guiding at-risk youth', bold: 'Y.A.P. Mentor' },
-              { text: 'Serves as a spiritual guide and community leader among fellow incarcerated individuals', bold: 'Spiritual Leader' },
-              { text: 'Organized fundraisers supporting the YMCA and broader community initiatives', bold: 'YMCA Fundraiser' },
-              { text: 'Donated to food banks in upstate New York — giving back even from behind bars', bold: 'Food Bank Donor' },
-              { text: 'No disciplinary infractions in over a decade — a record of sustained good conduct', bold: 'No Infractions 10+ Years' },
+              { label: 'GED Earned — 1992', text: 'Earned his GED just three years into his sentence, setting the tone for decades of self-improvement.' },
+              { label: 'Certified Educator', text: 'Became certified in HIV/AIDS awareness and health education, teaching fellow incarcerated individuals.' },
+              { label: 'Y.A.P. Mentor', text: 'Joined the Youth Assistance Program, guiding at-risk youth through the consequences of crime.' },
+              { label: 'Spiritual Leader', text: 'Became a recognized spiritual guide and community leader within the correctional facility.' },
+              { label: 'Rehab Programs', text: 'Completed multiple rehabilitation and self-development programs throughout his incarceration.' },
+              { label: 'YMCA Fundraiser', text: 'Organized fundraisers from behind bars supporting the YMCA and broader community initiatives.' },
+              { label: 'Food Bank Donor', text: 'Donated to food banks in upstate New York — giving back to the community even while incarcerated.' },
+              { label: 'No Infractions — 10+ Years', text: 'Has maintained a spotless disciplinary record for over a decade, a testament to sustained personal growth.' },
             ].map((item, i) => (
-              <div key={i} className="achievement-item" style={{ backgroundColor: 'var(--navy-light)', borderRadius: '0.625rem', padding: '1.25rem 1.25rem', border: '1px solid rgba(201,168,76,0.15)' }}>
-                <div className="checkmark">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8l4 4 6-7" stroke="var(--navy)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </div>
-                <div>
-                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.85rem', marginBottom: '0.25rem', letterSpacing: '0.02em' }}>{item.bold}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.text}</div>
+              <div key={i} className="timeline-item fade-in">
+                <div className="timeline-dot" />
+                <div className="timeline-card">
+                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.875rem', marginBottom: '0.375rem', letterSpacing: '0.02em' }}>{item.label}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.95rem', lineHeight: 1.65 }}>{item.text}</div>
                 </div>
               </div>
             ))}
@@ -283,7 +276,7 @@ function FreeToddScott() {
       {/* The Problem With Parole */}
       <section id="problem" style={{ backgroundColor: '#07111f', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               A Broken System
             </div>
@@ -302,7 +295,7 @@ function FreeToddScott() {
               { stat: '60%', desc: 'of parole denials cite "nature of the crime" — not the person before them today' },
               { stat: '$60K', desc: 'per year — the cost to New York taxpayers to keep one person incarcerated' },
             ].map((item, i) => (
-              <div key={i} className="stat-card">
+              <div key={i} className="stat-card fade-in" style={{ transitionDelay: `${i * 0.1}s` }}>
                 <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1, marginBottom: '0.875rem' }}>{item.stat}</div>
                 <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</div>
               </div>
@@ -334,7 +327,7 @@ function FreeToddScott() {
       {/* Testimonials / Voices */}
       <section id="voices" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               Community Support
             </div>
@@ -366,7 +359,7 @@ function FreeToddScott() {
                 title: 'New York State Senate',
               },
             ].map((t, i) => (
-              <div key={i} className="quote-card">
+              <div key={i} className="quote-card fade-in" style={{ transitionDelay: `${i * 0.1}s` }}>
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.6 }}>
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
@@ -386,7 +379,7 @@ function FreeToddScott() {
       {/* Join the Movement / Action */}
       <section id="action" style={{ backgroundColor: 'var(--cream)', color: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               Take Action Now
             </div>
