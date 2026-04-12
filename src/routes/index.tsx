@@ -182,16 +182,16 @@ function FreeToddScott() {
       </section>
 
       {/* The Problem With Parole */}
-      <section id="problem" style={{ backgroundColor: '#07111f', padding: '6rem 1.5rem' }}>
+      <section id="problem" style={{ backgroundColor: 'var(--cream)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'rgba(10,22,40,0.08)', color: 'var(--navy)', border: '1px solid rgba(10,22,40,0.2)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               A Broken System
             </div>
-            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem' }}>
+            <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
               The Problem With Parole
             </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem', maxWidth: '680px', margin: '0 auto' }}>
+            <p style={{ color: '#4a5a70', fontSize: '1.1rem', maxWidth: '680px', margin: '0 auto' }}>
               New York State's parole system is broken. Instead of evaluating who a person <em>is today</em>, it fixates on who they were at the moment of their worst decision.
             </p>
           </div>
@@ -284,44 +284,41 @@ function FreeToddScott() {
         </div>
       </section>
 
-      {/* Join the Movement / Action */}
-      <section id="action" style={{ backgroundColor: 'var(--cream)', color: 'var(--navy)', padding: '6rem 1.5rem' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              Take Action Now
+      {/* HBO Documentary */}
+      <section id="action" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="fade-in" style={{ marginBottom: '2rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+              Now Streaming on HBO
             </div>
-            <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
-              Join the Movement
+            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem', fontStyle: 'italic' }}>
+              Nature of the Crime
             </h2>
-            <p style={{ color: '#4a5a70', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-              Every action you take — no matter how small — adds to the chorus demanding justice and recognition of Todd's transformation.
+            <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '580px', margin: '0 auto' }}>
+              The moving HBO documentary that tells Todd's story in his own words — an intimate portrait of 35 years of transformation, mentorship, and a broken system that refuses to see who he is today.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
-            {/* HBO Documentary */}
-            <div style={{ backgroundColor: 'var(--navy)', borderRadius: '0.75rem', padding: '1.75rem', border: '1px solid rgba(201,168,76,0.3)', transition: 'transform 0.2s' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                <div style={{ width: '2.5rem', height: '2.5rem', borderRadius: '50%', backgroundColor: 'rgba(201,168,76,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--gold)">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-                <h3 style={{ color: 'var(--gold)', fontWeight: 700, fontSize: '1rem', margin: 0 }}>Watch the HBO Documentary</h3>
-              </div>
-              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.25rem' }}>
-                Watch <em>"Nature of the Crime"</em> — the moving HBO documentary featuring Todd's story. An intimate portrait of 35 years of transformation and a system that refuses to see who he is today.
-              </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
-                <a href="https://www.hbomax.com/movies/nature-of-the-crime/a83494c0-f7f4-4f85-8ca9-975e9acdb47e" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  Watch Full Film
-                </a>
-                <a href="https://www.youtube.com/watch?v=dKLcR_AFA4Y" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ textAlign: 'center', padding: '0.75rem 1rem', fontSize: '0.9rem' }}>
-                  Watch Trailer on YouTube
-                </a>
-              </div>
-            </div>
+          {/* Trailer embed */}
+          <div style={{ borderRadius: '0.875rem', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.25)', maxWidth: '720px', margin: '2.5rem auto', aspectRatio: '16/9' }}>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dKLcR_AFA4Y"
+              title="Nature of the Crime — Official Trailer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ display: 'block', border: 'none' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="https://www.hbomax.com/movies/nature-of-the-crime/a83494c0-f7f4-4f85-8ca9-975e9acdb47e" target="_blank" rel="noopener noreferrer" className="btn-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
+              Watch Full Film on HBO
+            </a>
+            <a href="https://www.youtube.com/watch?v=dKLcR_AFA4Y" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
+              Watch Trailer on YouTube
+            </a>
           </div>
         </div>
       </section>
