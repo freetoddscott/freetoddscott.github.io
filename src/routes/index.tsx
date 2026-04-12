@@ -270,7 +270,7 @@ function FreeToddScott() {
         <div style={{ maxWidth: '700px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              Add Your Name
+              Join the Movement
             </div>
             <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
               Sign the Petition
