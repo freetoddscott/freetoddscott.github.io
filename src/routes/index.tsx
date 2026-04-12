@@ -512,7 +512,16 @@ function FreeToddScott() {
             #FreeToddScott
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-            {navLinks.map(link => (
+            {[
+              { href: '/#who', label: 'Who is Todd' },
+              { href: '/#journey', label: 'His Journey' },
+              { href: '/#problem', label: 'The Problem' },
+              { href: '/#voices', label: 'Voices' },
+              { href: '/#action', label: 'Take Action' },
+              { href: '/#petition', label: 'Petition' },
+              { href: '/#contact', label: 'Contact' },
+              { href: '/press', label: 'Press' },
+            ].map(link => (
               <a key={link.href} href={link.href} className="nav-link" style={{ fontSize: '0.8rem' }}>
                 {link.label}
               </a>
