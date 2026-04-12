@@ -89,7 +89,7 @@ function FreeToddScott() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
           {/* Portrait + Bio */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center' }}>
             <div>
               {/* Portrait — replace /todd-portrait.jpg in public/ with a real photo */}
             <div style={{
@@ -142,96 +142,48 @@ function FreeToddScott() {
             </div>
           </div>
 
-          {/* His Journey — timeline */}
-          <div style={{ borderTop: '1px solid rgba(10,22,40,0.1)', paddingTop: '4rem' }}>
-            <div className="fade-in" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-              <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-                Decades of Dedication
-              </div>
-              <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
-                His Rehabilitative Journey
-              </h2>
-              <p style={{ color: '#4a5a70', fontSize: '1.05rem', maxWidth: '580px', margin: '0 auto' }}>
-                Over 35 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
-              </p>
-            </div>
+        </div>
+      </section>
 
-            <div className="timeline">
-              {[
-                { label: 'GED Earned — 1992', text: 'Earned his GED just three years into his sentence, setting the tone for decades of self-improvement.' },
-                { label: 'Certified Educator', text: 'Became certified in HIV/AIDS awareness and health education, teaching fellow incarcerated individuals.' },
-                { label: 'Y.A.P. Mentor', text: 'Joined the Youth Assistance Program, guiding at-risk youth through the consequences of crime.' },
-                { label: 'Spiritual Leader', text: 'Became a recognized spiritual guide and community leader within the correctional facility.' },
-                { label: 'Rehab Programs', text: 'Completed multiple rehabilitation and self-development programs throughout his incarceration.' },
-                { label: 'YMCA Fundraiser', text: 'Organized fundraisers from behind bars supporting the YMCA and broader community initiatives.' },
-                { label: 'Food Bank Donor', text: 'Donated to food banks in upstate New York — giving back to the community even while incarcerated.' },
-                { label: 'No Infractions — 10+ Years', text: 'Has maintained a spotless disciplinary record for over a decade, a testament to sustained personal growth.' },
-              ].map((item, i) => (
-                <div key={i} className="timeline-item fade-in">
-                  <div className="timeline-dot" />
-                  <div className="timeline-card">
-                    <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.875rem', marginBottom: '0.375rem', letterSpacing: '0.02em' }}>{item.label}</div>
-                    <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.95rem', lineHeight: 1.65 }}>{item.text}</div>
-                  </div>
-                </div>
-              ))}
+      {/* Todd's Rehabilitative Journey */}
+      <section id="journey" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+              Decades of Dedication
             </div>
+            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem' }}>
+              His Rehabilitative Journey
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
+              Over 35 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
+            </p>
           </div>
 
+          <div className="timeline">
+            {[
+              { label: 'GED Earned — 1992', text: 'Earned his GED just three years into his sentence, setting the tone for decades of self-improvement.' },
+              { label: 'Certified Educator', text: 'Became certified in HIV/AIDS awareness and health education, teaching fellow incarcerated individuals.' },
+              { label: 'Y.A.P. Mentor', text: 'Joined the Youth Assistance Program, guiding at-risk youth through the consequences of crime.' },
+              { label: 'Spiritual Leader', text: 'Became a recognized spiritual guide and community leader within the correctional facility.' },
+              { label: 'Rehab Programs', text: 'Completed multiple rehabilitation and self-development programs throughout his incarceration.' },
+              { label: 'YMCA Fundraiser', text: 'Organized fundraisers from behind bars supporting the YMCA and broader community initiatives.' },
+              { label: 'Food Bank Donor', text: 'Donated to food banks in upstate New York — giving back to the community even while incarcerated.' },
+              { label: 'No Infractions — 10+ Years', text: 'Has maintained a spotless disciplinary record for over a decade, a testament to sustained personal growth.' },
+            ].map((item, i) => (
+              <div key={i} className="timeline-item fade-in">
+                <div className="timeline-dot" />
+                <div className="timeline-card">
+                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.875rem', marginBottom: '0.375rem', letterSpacing: '0.02em' }}>{item.label}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.95rem', lineHeight: 1.65 }}>{item.text}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* The Problem With Parole */}
-      <section id="problem" style={{ backgroundColor: 'var(--cream)', padding: '6rem 1.5rem' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              A Broken System
-            </div>
-            <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
-              The Problem With Parole
-            </h2>
-            <p style={{ color: '#4a5a70', fontSize: '1.1rem', maxWidth: '680px', margin: '0 auto' }}>
-              New York State's parole system is broken. Instead of evaluating who a person <em>is today</em>, it fixates on who they were at the moment of their worst decision.
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '3.5rem' }}>
-            {[
-              { stat: '85%', desc: 'of parole-eligible individuals who complete rehabilitation programs remain incarcerated' },
-              { stat: '60%', desc: 'of parole denials cite "nature of the crime" — not the person before them today' },
-              { stat: '$60K', desc: 'per year — the cost to New York taxpayers to keep one person incarcerated' },
-            ].map((item, i) => (
-              <div key={i} className="stat-card fade-in" style={{ transitionDelay: `${i * 0.1}s` }}>
-                <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1, marginBottom: '0.875rem' }}>{item.stat}</div>
-                <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quote */}
-          <div style={{
-            borderLeft: '4px solid var(--gold)',
-            backgroundColor: 'var(--navy-light)',
-            borderRadius: '0 0.75rem 0.75rem 0',
-            padding: '2rem 2.25rem',
-            maxWidth: '760px',
-            margin: '0 auto',
-          }}>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.7 }}>
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-            </svg>
-            <blockquote style={{ fontSize: '1.2rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: 1.75, margin: '0 0 1.25rem' }}>
-              Giving a man legitimate hope is a laudable goal; giving him false hope is utterly inhumane.
-            </blockquote>
-            <cite style={{ color: 'var(--gold)', fontWeight: 700, fontStyle: 'normal', fontSize: '0.95rem' }}>
-              — John MacKenzie
-            </cite>
-          </div>
-        </div>
-      </section>
-
       {/* HBO Documentary */}
       <section id="action" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
@@ -267,6 +219,50 @@ function FreeToddScott() {
             <a href="https://www.youtube.com/watch?v=dKLcR_AFA4Y" target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '1rem', padding: '0.875rem 2rem' }}>
               Watch Trailer on YouTube
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* The Problem With Parole */}
+      <section id="problem" style={{ backgroundColor: 'var(--cream)', padding: '6rem 1.5rem' }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+              A Broken System
+            </div>
+            <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
+              The Problem With Parole
+            </h2>
+            <p style={{ color: '#4a5a70', fontSize: '1.1rem', maxWidth: '680px', margin: '0 auto' }}>
+              New York State's parole system is broken. Instead of evaluating who a person <em>is today</em>, it fixates on who they were at the moment of their worst decision.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', marginBottom: '3.5rem' }}>
+            {[
+              { stat: '85%', desc: 'of parole-eligible individuals who complete rehabilitation programs remain incarcerated' },
+              { stat: '60%', desc: 'of parole denials cite "nature of the crime" — not the person before them today' },
+              { stat: '$60K', desc: 'per year — the cost to New York taxpayers to keep one person incarcerated' },
+            ].map((item, i) => (
+              <div key={i} className="stat-card fade-in" style={{ transitionDelay: `${i * 0.1}s` }}>
+                <div style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1, marginBottom: '0.875rem' }}>{item.stat}</div>
+                <div style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.95rem', lineHeight: 1.6 }}>{item.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quote */}
+          <div style={{ borderLeft: '4px solid var(--gold)', backgroundColor: 'var(--navy-light)', borderRadius: '0 0.75rem 0.75rem 0', padding: '2rem 2.25rem', maxWidth: '760px', margin: '0 auto' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.7 }}>
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+            </svg>
+            <blockquote style={{ fontSize: '1.2rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.9)', lineHeight: 1.75, margin: '0 0 1.25rem' }}>
+              Giving a man legitimate hope is a laudable goal; giving him false hope is utterly inhumane.
+            </blockquote>
+            <cite style={{ color: 'var(--gold)', fontWeight: 700, fontStyle: 'normal', fontSize: '0.95rem' }}>
+              — John MacKenzie
+            </cite>
           </div>
         </div>
       </section>
