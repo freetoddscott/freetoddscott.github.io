@@ -500,10 +500,10 @@ function FreeToddScott() {
                 Your signature has been recorded. Please share this page with friends and family to amplify Todd's story.
               </p>
               <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/freetoddscott/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on X (Twitter)
                 </a>
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.github.io/freetoddscott/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on Facebook
                 </a>
               </div>
