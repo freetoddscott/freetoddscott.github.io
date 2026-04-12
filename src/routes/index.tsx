@@ -160,7 +160,7 @@ function FreeToddScott() {
             height: '340px',
           }}>
             <img
-              src="/todd-hero.jpg"
+              src={`${import.meta.env.BASE_URL}todd-hero.jpg`}
               alt="Todd Scott"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               onError={e => {
@@ -194,7 +194,7 @@ function FreeToddScott() {
               height: '420px',
             }}>
               <img
-                src="/todd-portrait.jpg"
+                src={`${import.meta.env.BASE_URL}todd-portrait.jpg`}
                 alt="Todd Scott portrait"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 onError={e => {
