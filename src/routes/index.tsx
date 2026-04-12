@@ -476,21 +476,6 @@ function FreeToddScott() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" style={{ backgroundColor: '#07111f', padding: '5rem 1.5rem' }}>
-        <div style={{ maxWidth: '600px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="section-title" style={{ color: 'white', marginBottom: '1.25rem' }}>
-            Get in Touch
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', lineHeight: 1.75, marginBottom: '2rem' }}>
-            For questions, media inquiries, or to coordinate advocacy efforts, reach out directly.
-          </p>
-          <a href="mailto:bringtoddscotthome57@gmail.com" className="btn-gold" style={{ fontSize: '1.05rem', wordBreak: 'break-all' }}>
-            bringtoddscotthome57@gmail.com
-          </a>
-        </div>
-      </section>
-
     </>
   )
 }

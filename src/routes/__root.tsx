@@ -8,7 +8,6 @@ const navLinks = [
   { href: '/#problem', label: 'The Problem' },
   { href: '/#action', label: 'HBO Documentary' },
   { href: '/#petition', label: 'Petition' },
-  { href: '/#contact', label: 'Contact' },
   { href: '/press', label: 'Press' },
 ]
 
