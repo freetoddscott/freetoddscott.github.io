@@ -84,12 +84,13 @@ function FreeToddScott() {
         </div>
       </section>
 
-      {/* Who is Todd Scott */}
+      {/* Who is Todd Scott + His Journey (merged) */}
       <section id="who" style={{ backgroundColor: 'var(--cream)', color: 'var(--navy)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center' }}>
+
+          {/* Portrait + Bio */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '5rem' }}>
             <div>
-              {/* Portrait placeholder */}
               {/* Portrait — replace /todd-portrait.jpg in public/ with a real photo */}
             <div style={{
               borderRadius: '1rem',
@@ -140,44 +141,43 @@ function FreeToddScott() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Todd's Rehabilitative Journey */}
-      <section id="journey" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              Decades of Dedication
-            </div>
-            <h2 className="section-title" style={{ color: 'white', marginBottom: '1rem' }}>
-              Todd's Rehabilitative Journey
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-              Over 35 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
-            </p>
-          </div>
-
-          <div className="timeline">
-            {[
-              { label: 'GED Earned — 1992', text: 'Earned his GED just three years into his sentence, setting the tone for decades of self-improvement.' },
-              { label: 'Certified Educator', text: 'Became certified in HIV/AIDS awareness and health education, teaching fellow incarcerated individuals.' },
-              { label: 'Y.A.P. Mentor', text: 'Joined the Youth Assistance Program, guiding at-risk youth through the consequences of crime.' },
-              { label: 'Spiritual Leader', text: 'Became a recognized spiritual guide and community leader within the correctional facility.' },
-              { label: 'Rehab Programs', text: 'Completed multiple rehabilitation and self-development programs throughout his incarceration.' },
-              { label: 'YMCA Fundraiser', text: 'Organized fundraisers from behind bars supporting the YMCA and broader community initiatives.' },
-              { label: 'Food Bank Donor', text: 'Donated to food banks in upstate New York — giving back to the community even while incarcerated.' },
-              { label: 'No Infractions — 10+ Years', text: 'Has maintained a spotless disciplinary record for over a decade, a testament to sustained personal growth.' },
-            ].map((item, i) => (
-              <div key={i} className="timeline-item fade-in">
-                <div className="timeline-dot" />
-                <div className="timeline-card">
-                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.875rem', marginBottom: '0.375rem', letterSpacing: '0.02em' }}>{item.label}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.95rem', lineHeight: 1.65 }}>{item.text}</div>
-                </div>
+          {/* His Journey — timeline */}
+          <div style={{ borderTop: '1px solid rgba(10,22,40,0.1)', paddingTop: '4rem' }}>
+            <div className="fade-in" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+              <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+                Decades of Dedication
               </div>
-            ))}
+              <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
+                His Rehabilitative Journey
+              </h2>
+              <p style={{ color: '#4a5a70', fontSize: '1.05rem', maxWidth: '580px', margin: '0 auto' }}>
+                Over 35 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
+              </p>
+            </div>
+
+            <div className="timeline">
+              {[
+                { label: 'GED Earned — 1992', text: 'Earned his GED just three years into his sentence, setting the tone for decades of self-improvement.' },
+                { label: 'Certified Educator', text: 'Became certified in HIV/AIDS awareness and health education, teaching fellow incarcerated individuals.' },
+                { label: 'Y.A.P. Mentor', text: 'Joined the Youth Assistance Program, guiding at-risk youth through the consequences of crime.' },
+                { label: 'Spiritual Leader', text: 'Became a recognized spiritual guide and community leader within the correctional facility.' },
+                { label: 'Rehab Programs', text: 'Completed multiple rehabilitation and self-development programs throughout his incarceration.' },
+                { label: 'YMCA Fundraiser', text: 'Organized fundraisers from behind bars supporting the YMCA and broader community initiatives.' },
+                { label: 'Food Bank Donor', text: 'Donated to food banks in upstate New York — giving back to the community even while incarcerated.' },
+                { label: 'No Infractions — 10+ Years', text: 'Has maintained a spotless disciplinary record for over a decade, a testament to sustained personal growth.' },
+              ].map((item, i) => (
+                <div key={i} className="timeline-item fade-in">
+                  <div className="timeline-dot" />
+                  <div className="timeline-card">
+                    <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.875rem', marginBottom: '0.375rem', letterSpacing: '0.02em' }}>{item.label}</div>
+                    <div style={{ color: 'rgba(255,255,255,0.82)', fontSize: '0.95rem', lineHeight: 1.65 }}>{item.text}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -185,7 +185,7 @@ function FreeToddScott() {
       <section id="problem" style={{ backgroundColor: 'var(--cream)', padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
           <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(10,22,40,0.08)', color: 'var(--navy)', border: '1px solid rgba(10,22,40,0.2)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'var(--gold)', color: 'var(--navy)', padding: '0.3rem 1rem', borderRadius: '2rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
               A Broken System
             </div>
             <h2 className="section-title" style={{ color: 'var(--navy)', marginBottom: '1rem' }}>
@@ -228,58 +228,6 @@ function FreeToddScott() {
             <cite style={{ color: 'var(--gold)', fontWeight: 700, fontStyle: 'normal', fontSize: '0.95rem' }}>
               — John MacKenzie
             </cite>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials / Voices */}
-      <section id="voices" style={{ backgroundColor: 'var(--navy)', padding: '6rem 1.5rem' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div className="fade-in" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1.25rem' }}>
-              Community Support
-            </div>
-            <h2 className="section-title" style={{ color: 'white' }}>
-              Words from Community Leaders & Loved Ones
-            </h2>
-          </div>
-
-          <div className="quotes-scroll" style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', paddingBottom: '1rem', scrollSnapType: 'x mandatory' }}>
-            {[
-              {
-                quote: 'In all my dealings with Mr. Scott, he was respectful and positive. I have always considered him to be a model inmate.',
-                name: 'Superintendent Dale Artus',
-                title: 'Attica Correctional Facility',
-              },
-              {
-                quote: 'Mr. Scott has worked to turn his life around in prison...Today, I believe he is ready to come home and contribute to the community.',
-                name: 'Assembly Member Eddie Gibbs',
-                title: 'New York State Assembly',
-              },
-              {
-                quote: 'We do not ask for mercy; we ask for recognition of redemption...',
-                name: 'Sabrina Scott',
-                title: "Todd's Wife",
-              },
-              {
-                quote: 'Granting Mr. Scott parole would demonstrate New York\'s strong commitment to and belief in fairness and the power of personal transformation...',
-                name: 'Senator Julia Salazar',
-                title: 'New York State Senate',
-              },
-            ].map((t, i) => (
-              <div key={i} className="quote-card" style={{ flex: '0 0 300px', scrollSnapAlign: 'start' }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.6 }}>
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <blockquote style={{ fontSize: '1rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.88)', lineHeight: 1.75, margin: '0 0 1.5rem' }}>
-                  "{t.quote}"
-                </blockquote>
-                <div>
-                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.95rem' }}>{t.name}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', marginTop: '0.2rem' }}>{t.title}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -483,6 +431,50 @@ function FreeToddScott() {
                 Read existing letters of support
               </a>
             </div>
+          </div>
+        </div>
+
+        {/* Community voices */}
+        <div style={{ maxWidth: '1100px', margin: '3.5rem auto 0', paddingTop: '3rem', borderTop: '1px solid rgba(201,168,76,0.12)' }}>
+          <h3 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'center', marginBottom: '2rem' }}>
+            Words from Community Leaders &amp; Loved Ones
+          </h3>
+          <div className="quotes-scroll" style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', paddingBottom: '1rem', scrollSnapType: 'x mandatory' }}>
+            {[
+              {
+                quote: 'In all my dealings with Mr. Scott, he was respectful and positive. I have always considered him to be a model inmate.',
+                name: 'Superintendent Dale Artus',
+                title: 'Attica Correctional Facility',
+              },
+              {
+                quote: 'Mr. Scott has worked to turn his life around in prison...Today, I believe he is ready to come home and contribute to the community.',
+                name: 'Assembly Member Eddie Gibbs',
+                title: 'New York State Assembly',
+              },
+              {
+                quote: 'We do not ask for mercy; we ask for recognition of redemption...',
+                name: 'Sabrina Scott',
+                title: "Todd's Wife",
+              },
+              {
+                quote: "Granting Mr. Scott parole would demonstrate New York's strong commitment to and belief in fairness and the power of personal transformation...",
+                name: 'Senator Julia Salazar',
+                title: 'New York State Senate',
+              },
+            ].map((t, i) => (
+              <div key={i} className="quote-card" style={{ flex: '0 0 300px', scrollSnapAlign: 'start' }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.6 }}>
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <blockquote style={{ fontSize: '1rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.88)', lineHeight: 1.75, margin: '0 0 1.5rem' }}>
+                  "{t.quote}"
+                </blockquote>
+                <div>
+                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.95rem' }}>{t.name}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', marginTop: '0.2rem' }}>{t.title}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

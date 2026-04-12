@@ -33,7 +33,7 @@ function PressPage() {
           Todd Scott in the News
         </h1>
         <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.05rem', maxWidth: '580px', margin: '0 auto' }}>
-          Coverage, documentary, and community letters documenting Todd's story and the movement for his release.
+          Coverage documenting Todd's story and the movement for his release.
         </p>
       </div>
 
