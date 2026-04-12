@@ -101,78 +101,71 @@ function FreeToddScott() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" style={{
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        background: 'linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #0d2844 100%)',
-        position: 'relative',
-        overflow: 'hidden',
-        paddingTop: '4rem',
-      }}>
-        {/* Decorative elements */}
-        <div style={{
-          position: 'absolute', top: '10%', right: '5%',
-          width: '400px', height: '400px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{
-          position: 'absolute', bottom: '10%', left: '0',
-          width: '300px', height: '300px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
+      <section id="hero" style={{ position: 'relative', backgroundColor: 'var(--navy)' }}>
 
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '5rem 1.5rem', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div style={{ marginBottom: '1.5rem' }}>
-            <span style={{
-              display: 'inline-block',
-              backgroundColor: 'rgba(201,168,76,0.15)',
-              color: 'var(--gold)',
-              border: '1px solid rgba(201,168,76,0.4)',
-              borderRadius: '2rem',
-              padding: '0.4rem 1.25rem',
-              fontSize: '0.875rem',
-              fontWeight: 700,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-            }}>
-              35+ Years Incarcerated · Demanding Justice
-            </span>
-          </div>
-
-          <h1 className="hero-title" style={{ color: 'var(--gold)', marginBottom: '1.5rem', textShadow: '0 2px 20px rgba(201,168,76,0.3)' }}>
-            Free Todd Scott
-          </h1>
-
-          <p className="hero-subtitle" style={{ color: 'rgba(255,255,255,0.85)', maxWidth: '700px', margin: '0 auto 3rem', lineHeight: 1.7 }}>
-            Give Todd Scott the Opportunity to Prove His Growth, Redemption,
-            and Potential to Become a Trusted Community Advocate.
-          </p>
-
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#petition" className="btn-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
-              Sign the Petition
-            </a>
-            <a href="#action" className="btn-outline-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
-              Join the Movement
-            </a>
-          </div>
-        </div>
-
-        {/* Full-bleed hero photo */}
-        <div style={{ width: '100%', height: '480px', overflow: 'hidden', position: 'relative', marginTop: '2rem' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(to bottom, var(--navy), transparent)', zIndex: 1, pointerEvents: 'none' }} />
+        {/* Photo plane — flush to top, title overlaid */}
+        <div style={{ position: 'relative', height: '85vh', minHeight: '520px', overflow: 'hidden' }}>
           <img
             src={`${import.meta.env.BASE_URL}todd-hero.jpg`}
             alt="A scene from the HBO documentary Nature of the Crime"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%', display: 'block' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%', display: 'block' }}
           />
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(to top, var(--navy), transparent)', zIndex: 1, pointerEvents: 'none' }} />
+          {/* Gradient: modest at top, clears in the middle, fades to navy at bottom */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to bottom, rgba(10,22,40,0.4) 0%, rgba(10,22,40,0.1) 40%, rgba(10,22,40,0.6) 75%, var(--navy) 100%)',
+            pointerEvents: 'none',
+          }} />
+          {/* Title centered on photo */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            paddingTop: '4rem',
+          }}>
+            <h1 className="hero-title" style={{
+              color: 'var(--gold)',
+              textAlign: 'center',
+              textShadow: '0 4px 32px rgba(0,0,0,0.65)',
+              padding: '0 1.5rem',
+              margin: 0,
+            }}>
+              Free Todd Scott
+            </h1>
+          </div>
+        </div>
+
+        {/* Content plane — badge, subtitle, CTAs on solid navy */}
+        <div style={{ padding: '3.5rem 1.5rem 6rem', textAlign: 'center' }}>
+          <div style={{ maxWidth: '700px', margin: '0 auto' }}>
+            <div style={{ marginBottom: '1.5rem' }}>
+              <span style={{
+                display: 'inline-block',
+                backgroundColor: 'rgba(201,168,76,0.15)',
+                color: 'var(--gold)',
+                border: '1px solid rgba(201,168,76,0.4)',
+                borderRadius: '2rem',
+                padding: '0.4rem 1.25rem',
+                fontSize: '0.875rem',
+                fontWeight: 700,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+              }}>
+                35+ Years Incarcerated · Demanding Justice
+              </span>
+            </div>
+            <p className="hero-subtitle" style={{ color: 'rgba(255,255,255,0.85)', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
+              Give Todd Scott the Opportunity to Prove His Growth, Redemption,
+              and Potential to Become a Trusted Community Advocate.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="#petition" className="btn-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
+                Sign the Petition
+              </a>
+              <a href="#action" className="btn-outline-gold" style={{ fontSize: '1.125rem', padding: '1rem 2.5rem' }}>
+                Join the Movement
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
