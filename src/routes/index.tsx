@@ -505,33 +505,6 @@ function FreeToddScott() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer style={{ backgroundColor: 'var(--navy)', borderTop: '1px solid rgba(201,168,76,0.2)', padding: '2.5rem 1.5rem', textAlign: 'center' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.25rem', marginBottom: '1rem' }}>
-            #FreeToddScott
-          </div>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-            {[
-              { href: '/#who', label: 'Who is Todd' },
-              { href: '/#journey', label: 'His Journey' },
-              { href: '/#problem', label: 'The Problem' },
-              { href: '/#voices', label: 'Voices' },
-              { href: '/#action', label: 'Take Action' },
-              { href: '/#petition', label: 'Petition' },
-              { href: '/#contact', label: 'Contact' },
-              { href: '/press', label: 'Press' },
-            ].map(link => (
-              <a key={link.href} href={link.href} className="nav-link" style={{ fontSize: '0.8rem' }}>
-                {link.label}
-              </a>
-            ))}
-          </div>
-          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: '0.8rem' }}>
-            This website is maintained by supporters of Todd Scott's release. All information is provided for advocacy purposes.
-          </p>
-        </div>
-      </footer>
     </>
   )
 }
