@@ -433,7 +433,7 @@ function FreeToddScott() {
 
         {/* Community voices */}
         <div style={{ maxWidth: '1100px', margin: '3.5rem auto 0', paddingTop: '3rem', borderTop: '1px solid rgba(201,168,76,0.12)' }}>
-          <h3 style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'center', marginBottom: '2rem' }}>
+          <h3 style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.1rem', fontWeight: 700, letterSpacing: '0.02em', textAlign: 'center', marginBottom: '2rem' }}>
             Words from Community Leaders &amp; Loved Ones
           </h3>
           <div className="quotes-scroll" style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', paddingBottom: '1rem', scrollSnapType: 'x mandatory' }}>
