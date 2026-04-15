@@ -7,7 +7,7 @@ const navLinks = [
   { href: '/#who', label: 'Who is Todd' },
   { href: '/#action', label: 'HBO Documentary' },
   { href: '/#petition', label: 'Show Your Support' },
-  { href: '/press', label: 'Press' },
+  { href: '/press', label: 'Media' },
 ]
 
 function SiteNav() {
