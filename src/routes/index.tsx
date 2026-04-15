@@ -65,7 +65,7 @@ function FreeToddScott() {
                 </span>
               </div>
               <h1 className="hero-title" style={{ color: 'var(--gold)', margin: '0 0 1.5rem', textShadow: '0 4px 32px rgba(0,0,0,0.65)' }}>
-                Free Todd Scott
+                Bring Todd Scott Home
               </h1>
               <p className="hero-subtitle" style={{ color: 'rgba(255,255,255,0.9)', margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
                 Give Todd Scott the Opportunity to Prove His Growth, Redemption,
@@ -298,7 +298,7 @@ function FreeToddScott() {
                 Your signature has been recorded. Please share this page with friends and family to amplify Todd's story.
               </p>
               <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #FreeToddScott — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #BringToddScottHome — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on X (Twitter)
                 </a>
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
@@ -373,7 +373,7 @@ function FreeToddScott() {
                 disabled={petitionState.submitting}
                 style={{ width: '100%', fontSize: '1.05rem', padding: '1rem', opacity: petitionState.submitting ? 0.7 : 1 }}
               >
-                {petitionState.submitting ? 'Submitting…' : 'Sign the Petition — Free Todd Scott'}
+                {petitionState.submitting ? 'Submitting…' : 'Sign the Petition — Bring Todd Scott Home'}
               </button>
               <p style={{ color: 'rgba(10,22,40,0.4)', fontSize: '0.8rem', marginTop: '1rem', textAlign: 'center', lineHeight: 1.5 }}>
                 Your information will only be used in support of Todd Scott's parole advocacy and will not be shared with third parties.

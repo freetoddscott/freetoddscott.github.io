@@ -18,7 +18,7 @@ function SiteNav() {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4rem' }}>
           <a href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <span style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.125rem', letterSpacing: '-0.01em' }}>
-              #FreeToddScott
+              #BringToddScottHome
             </span>
           </a>
 
@@ -71,7 +71,7 @@ export const Route = createRootRoute({
       <Outlet />
       <footer style={{ backgroundColor: 'var(--navy)', borderTop: '1px solid rgba(201,168,76,0.2)', padding: '2rem 1.5rem', textAlign: 'center' }}>
         <div style={{ color: 'var(--gold)', fontWeight: 900, fontSize: '1.1rem', marginBottom: '0.5rem' }}>
-          #FreeToddScott
+          #BringToddScottHome
         </div>
         <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.8rem', margin: 0 }}>
           This website is maintained by supporters of Todd Scott's release. All information is provided for advocacy purposes.
