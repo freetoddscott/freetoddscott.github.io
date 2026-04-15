@@ -6,7 +6,7 @@ import '../styles.css'
 const navLinks = [
   { href: '/#who', label: 'Who is Todd' },
   { href: '/#action', label: 'HBO Documentary' },
-  { href: '/#petition', label: 'Petition' },
+  { href: '/#petition', label: 'Show Your Support' },
   { href: '/press', label: 'Press' },
 ]
 
