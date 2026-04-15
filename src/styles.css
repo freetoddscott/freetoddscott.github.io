@@ -196,6 +196,7 @@ html {
 }
 
 .mobile-menu-btn {
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -211,7 +212,6 @@ html {
 }
 
 @media (min-width: 769px) {
-  .mobile-menu-btn { display: none; }
   .mobile-menu { display: none; }
 }
 
