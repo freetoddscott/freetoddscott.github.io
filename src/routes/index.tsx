@@ -61,7 +61,7 @@ function FreeToddScott() {
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
                 }}>
-                  35+ Years Incarcerated · Seeking Redemption
+                  38+ Years Incarcerated · Seeking Redemption
                 </span>
               </div>
               <h1 className="hero-title" style={{ color: 'var(--gold)', margin: '0 0 1.5rem', textShadow: '0 4px 32px rgba(0,0,0,0.65)' }}>
@@ -120,11 +120,11 @@ function FreeToddScott() {
                 Who is Todd Scott
               </div>
               <h2 className="section-title" style={{ marginBottom: '1.5rem', color: 'var(--navy)' }}>
-                A Man Transformed<br />Over 35 Years
+                A Man Transformed<br />Over 38 Years
               </h2>
               <div style={{ lineHeight: 1.85, fontSize: '1.05rem', color: '#2a3a50' }}>
                 <p style={{ marginBottom: '1.25rem' }}>
-                  In <strong>1989</strong>, at just <strong>19 years old</strong>, Todd Scott was convicted for his involvement in the murder of NYPD Officer Edward Byrne. He was sentenced to <strong>25 years to life</strong> in prison — a sentence that has now stretched beyond 35 years.
+                  In <strong>1989</strong>, at just <strong>19 years old</strong>, Todd Scott was convicted for his involvement in the murder of NYPD Officer Edward Byrne. He was sentenced to <strong>25 years to life</strong> in prison — a sentence that has now stretched beyond 38 years.
                 </p>
                 <p style={{ marginBottom: '1.25rem' }}>
                   That young man and the man Todd Scott is today are not the same person. Today, Todd is a <strong>devoted father</strong>, a <strong>loving husband</strong>, a trusted <strong>mentor</strong>, a <strong>devout Muslim</strong>, and a recognized <strong>community leader</strong> within the walls of the correctional system.
@@ -153,7 +153,7 @@ function FreeToddScott() {
               His Rehabilitative Journey
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-              Over 35 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
+              Over 38 years, Todd has consistently demonstrated the kind of transformation that rehabilitation programs are designed to achieve.
             </p>
           </div>
 
@@ -237,7 +237,7 @@ function FreeToddScott() {
               Nature of the Crime
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.68)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '580px', margin: '0 auto' }}>
-              The moving HBO documentary that tells Todd's story in his own words — an intimate portrait of 35 years of transformation, mentorship, and a broken system that refuses to see who he is today.
+              The moving HBO documentary that tells Todd's story in his own words — an intimate portrait of 38 years of transformation, mentorship, and a broken system that refuses to see who he is today.
             </p>
           </div>
 
@@ -298,7 +298,7 @@ function FreeToddScott() {
                 Your signature has been recorded. Please share this page with friends and family to amplify Todd's story.
               </p>
               <div style={{ marginTop: '1.5rem', display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #BringToddScottHome — 35+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
+                <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('I just signed the petition to #BringToddScottHome — 38+ years incarcerated, a transformed man demanding a fair chance. Add your name: https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
                   Share on X (Twitter)
                 </a>
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://freetoddscott.github.io/')}`} target="_blank" rel="noopener noreferrer" className="btn-outline-gold" style={{ fontSize: '0.9rem', padding: '0.625rem 1.25rem' }}>
