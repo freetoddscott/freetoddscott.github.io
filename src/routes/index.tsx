@@ -32,7 +32,7 @@ function FreeToddScott() {
           <img
             src={`${import.meta.env.BASE_URL}todd-hero.jpg`}
             alt="A scene from the HBO documentary Nature of the Crime"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 25%', display: 'block' }}
+            className="hero-img"
           />
           {/* Dark overlay so all text stays readable */}
           <div style={{

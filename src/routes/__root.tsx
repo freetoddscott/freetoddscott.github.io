@@ -23,7 +23,7 @@ function SiteNav() {
           </a>
 
           {/* Desktop Nav */}
-          <div className="desktop-nav" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+          <div className="desktop-nav">
             {navLinks.map(link => (
               <a key={link.href} href={link.href} className="nav-link">
                 {link.label}
@@ -35,7 +35,6 @@ function SiteNav() {
           <button
             className="mobile-menu-btn"
             onClick={() => setOpen(!open)}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: '5px', padding: '0.5rem' }}
             aria-label="Toggle menu"
           >
             <span style={{ width: '24px', height: '2px', backgroundColor: 'var(--gold)', display: 'block' }} />
