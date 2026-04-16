@@ -438,7 +438,7 @@ function FreeToddScott() {
               Words from Community Leaders &amp; Loved Ones
             </h3>
           </div>
-          <div className="quotes-scroll" style={{ display: 'flex', gap: '1.5rem', overflowX: 'auto', paddingBottom: '1.25rem', scrollSnapType: 'x mandatory' }}>
+          <div className="quotes-scroll" style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem', overflowX: 'auto', paddingBottom: '1.25rem', scrollSnapType: 'x mandatory' }}>
             {[
               {
                 quote: 'In all my dealings with Mr. Scott, he was respectful and positive. I have always considered him to be a model inmate.',
