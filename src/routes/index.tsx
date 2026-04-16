@@ -429,11 +429,16 @@ function FreeToddScott() {
         </div>
 
         {/* Community voices */}
-        <div style={{ maxWidth: '1100px', margin: '3.5rem auto 0', paddingTop: '3rem', borderTop: '1px solid rgba(201,168,76,0.12)' }}>
-          <h3 style={{ color: 'rgba(255,255,255,0.75)', fontSize: '1.1rem', fontWeight: 700, letterSpacing: '0.02em', textAlign: 'center', marginBottom: '2rem' }}>
-            Words from Community Leaders &amp; Loved Ones
-          </h3>
-          <div className="quotes-scroll" style={{ display: 'flex', gap: '1.25rem', overflowX: 'auto', paddingBottom: '1rem', scrollSnapType: 'x mandatory' }}>
+        <div style={{ maxWidth: '1200px', margin: '3.5rem auto 0', paddingTop: '3.5rem', borderTop: '1px solid rgba(201,168,76,0.2)' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+            <div style={{ display: 'inline-block', backgroundColor: 'rgba(201,168,76,0.15)', color: 'var(--gold)', border: '1px solid rgba(201,168,76,0.4)', borderRadius: '2rem', padding: '0.3rem 1.25rem', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem' }}>
+              Voices of Support
+            </div>
+            <h3 style={{ color: 'white', fontSize: '1.75rem', fontWeight: 800, letterSpacing: '-0.01em', margin: 0 }}>
+              Words from Community Leaders &amp; Loved Ones
+            </h3>
+          </div>
+          <div className="quotes-scroll" style={{ display: 'flex', gap: '1.5rem', overflowX: 'auto', paddingBottom: '1.25rem', scrollSnapType: 'x mandatory' }}>
             {[
               {
                 quote: 'In all my dealings with Mr. Scott, he was respectful and positive. I have always considered him to be a model inmate.',
@@ -455,17 +460,52 @@ function FreeToddScott() {
                 name: 'Senator Julia Salazar',
                 title: 'New York State Senate',
               },
+              {
+                quote: 'We all make mistakes. We are all equally flawed. Scott admits his culpability, but society failed Mr. Scott; his family failed Mr. Scott; and we, who could have helped, closed our eyes and did nothing to help him. Mr. Scott has served 32 years of his life in payment for his mistake. Can you find it in your heart to spare Todd and give him a chance to breathe?',
+                name: 'Salvatore Alosco, Esq.',
+                title: "Todd's Defense Attorney, 1989–1990",
+              },
+              {
+                quote: 'The criminal justice system is ideally rooted in the principles of reform, rehabilitation, and the belief in second chances. Todd\'s situation is a prime example of how individuals can change and evolve, making a compelling case for the possibility of redemption.',
+                name: 'Senator Leroy Comrie',
+                title: 'New York State Senate',
+              },
+              {
+                quote: 'In 1991, Teens Against Crime was created with Todd in mind. In 1989, our community was devastated, and we wanted to do something that would help our youth. We need Todd back home where he can mentor our youth and help prevent them from going down the path he went.',
+                name: 'Florence Simmons',
+                title: 'Executive Director, Teens Against Crime',
+              },
+              {
+                quote: 'Todd has worked very hard to be where he is today, fighting through the nightmares of his past and showing sincere and deep remorse. Todd is not the young man that went into the system at age 19… It would be a privilege and pleasure to have Todd join my staff.',
+                name: 'Taana Gardner',
+                title: 'Acclaimed Musician',
+              },
+              {
+                quote: 'Todd has been a part of the Muslim community at Elmira for many years. In that time, he has maintained an exemplary disciplinary record, assisted with the Muslim oil fundraising project, and assisted in decision making for the community by serving on the Majlis. These behavioral changes are the result of Scott\'s pursuit of spiritual and mental disciplines that have changed his attitudes and way of thinking.',
+                name: 'Imam S. Afify',
+                title: 'Chaplain, Elmira Correctional Facility',
+              },
+              {
+                quote: 'Some of our members were incarcerated with Todd and directly observed both Todd\'s personal growth and development and the amazing contributions he made to other incarcerated people… If Todd has been able to do all of that incredible work while incarcerated, imagine what he can do for the community if he is released.',
+                name: 'Campaign for Alternatives to Isolated Confinement',
+                title: '#HALTsolitary',
+              },
+              {
+                quote: 'Todd completed his minimum term over a decade ago and has demonstrated through his actions, insight, and sustained commitment to rehabilitation that he is ready to return home.',
+                name: 'Elaina Polson, Io Brooks, and Kira Kaur',
+                title: 'Advocacy Team',
+              },
             ].map((t, i) => (
-              <div key={i} className="quote-card" style={{ flex: '0 0 300px', scrollSnapAlign: 'start' }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1rem', opacity: 0.6 }}>
+              <div key={i} className="quote-card" style={{ flex: '0 0 340px', scrollSnapAlign: 'start', border: '1px solid rgba(201,168,76,0.3)' }}>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--gold)" style={{ marginBottom: '1.25rem', opacity: 0.8 }}>
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <blockquote style={{ fontSize: '1rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.88)', lineHeight: 1.75, margin: '0 0 1.5rem' }}>
+                <blockquote style={{ fontSize: '1.05rem', fontStyle: 'italic', color: 'rgba(255,255,255,0.95)', lineHeight: 1.8, margin: '0 0 1.75rem' }}>
                   "{t.quote}"
                 </blockquote>
-                <div>
-                  <div style={{ fontWeight: 700, color: 'var(--gold)', fontSize: '0.95rem' }}>{t.name}</div>
-                  <div style={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem', marginTop: '0.2rem' }}>{t.title}</div>
+                <div style={{ marginTop: 'auto' }}>
+                  <div style={{ fontWeight: 800, color: 'var(--gold)', fontSize: '1rem' }}>{t.name}</div>
+                  <div style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.875rem', marginTop: '0.25rem' }}>{t.title}</div>
                 </div>
               </div>
             ))}
